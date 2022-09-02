@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "78692fd2-825f-47fb-b8e1-a8962c60007c",
+		"name": "Genesis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4090844"
+	},
+	"item": [
+		{
+			"name": "/v1/client",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{domain}}:{{port}}{{url}}/v1/client",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{domain}}"
+					],
+					"port": "{{port}}{{url}}",
+					"path": [
+						"v1",
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/loan",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":  \"David\",\n    \"email\": \"ccdosorio@gmail.com\",\n    \"birthday\": \"1999-11-30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{domain}}:{{port}}{{url}}/v1/loan",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{domain}}"
+					],
+					"port": "{{port}}{{url}}",
+					"path": [
+						"v1",
+						"loan"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "protocol",
+			"value": "http",
+			"type": "string"
+		},
+		{
+			"key": "port",
+			"value": "6100",
+			"type": "string"
+		},
+		{
+			"key": "domain",
+			"value": "localhost",
+			"type": "string"
+		},
+		{
+			"key": "url",
+			"value": "/api/genesis",
+			"type": "string"
+		}
+	]
+}
